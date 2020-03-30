@@ -1,13 +1,14 @@
 <template>
   <div class="projects">
-    <div class="projectsintro">{{projectsintro}}</div>
     <div class="projectsinformation">
       <div class="title">
         <h2>{{activeProject.name}}</h2>
       </div>
       <div class="textArea">{{activeProject.content}}</div>
-      <img class="picture" v-bind:src="activeProject.picture">
-      <a class="projectLink" v-bind:href="activeProject.link">Visit page</a>
+      <div class="picture-wrap">
+        <img class="picture" v-bind:src="activeProject.picture" />
+      </div>
+      <a class="projectLink" v-bind:href="activeProject.link">{{activeProject.link}}</a>
     </div>
   </div>
 </template>
@@ -20,8 +21,7 @@ export default {
   //state
   data() {
     return {
-      projectsintro:
-        "Both during my studies and in my free time i have been involved with various projects. Most of my projects are still under development but below you have a oppertunity to take a look at some of my projects"
+      projectsintro: ""
     };
   },
   props: ["id"],
@@ -42,43 +42,44 @@ export default {
 <style scoped>
 .projects {
   width: 90%;
-  margin-top: 2%;
+  height: 100%;
   margin-left: 5%;
-  padding-left: 5%;
-  padding-right: 5%;
-  display: grid;
-  grid-template-columns: 80% 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.projectsintro {
-  margin-top: 2%;
-  margin-bottom: 2%;
-  grid-column-start: 1;
-}
 .projectsinformation {
   margin-top: 2%;
-  grid-column-start: 1;
 }
 .title {
   text-align: center;
   margin-bottom: 2%;
-  grid-column-start: 1;
 }
+
+.picture-wrap {
+  height: 100%;
+}
+
 .picture {
   margin-top: 2%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 65%;
-  grid-column-start: 1;
+  border: 10px solid rgb(44, 44, 44);
+  border-radius: 17%;
 }
 .projectLink {
   display: block;
   margin: auto;
-  width: 20%;
   margin-bottom: 3%;
   margin-top: 3%;
   text-align: center;
-  grid-column-start: 1;
+  color: black;
+}
+
+.projectLink:hover {
+  color: #0086b3;
 }
 </style>

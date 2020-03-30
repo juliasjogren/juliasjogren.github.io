@@ -4,23 +4,27 @@
       <h1>{{maker}}</h1>
       <h4>{{welcome}}</h4>
     </div>
-    <img class="pic" src="../assets/CV-bild.jpg">
     <div class="buttons">
       <router-link class="routerButton" to="/">Home</router-link>
       <router-link class="routerButton" to="/About">About</router-link>
-      <div class="routerButton" v-on:click="showProjectList = !showProjectList">Projects
-        <ul class="projectList" v-if="showProjectList">
+      <div class="routerButton" @mouseover="showProjectList = true">
+        Projects
+        <ul
+          class="projectList"
+          v-if="showProjectList"
+          @mouseleave="showProjectList = !showProjectList"
+        >
           <router-link
             v-for="project in projectData"
             v-bind:key="project.id"
             :to="{ name: 'projects', params: {id:project.id}}"
             tag="li"
+            class="projectLink"
           >{{project.name}}</router-link>
         </ul>
       </div>
-
-      <!-- <router-link class="button" to="/Projects">Projects</router-link> -->
     </div>
+    <img class="picture" src="../assets/CV-bild.jpg" />
   </div>
 </template>
 
@@ -48,68 +52,78 @@ export default {
 <style scoped>
 .header {
   background: #0086b3;
-  width: 90%;
-  height: 100%;
-  margin-left: 5%;
+  width: 100%;
+  max-height: 90px;
   text-align: center;
-  /* border: palevioletred; */
   display: grid;
-  grid-template-rows: 60% 40%;
-  grid-template-columns: 80% 20%;
+  justify-content: center;
+  grid-template-rows: 70% 30%;
+  grid-template-columns: 85% 15%;
 }
-h1 {
-  margin: 0;
+
+.headerText {
+  grid-row-start: 1;
+  font-family: serif;
+  color: rgb(228, 224, 224);
 }
-h4 {
-  margin: 0;
-}
-.pic {
+
+.picture {
   border: black 3px solid;
-  width: 80%;
-  margin-top: 5%;
+  width: 100%;
+  justify-self: end;
   z-index: 1;
+  grid-row-start: 1;
   grid-column-start: 2;
 }
 .buttons {
-  background: grey;
-  display: grid;
-  padding: 10px;
   grid-row-start: 2;
-  grid-template-columns: 33% 33% 33%;
-  justify-content: space-evenly;
+  background-color: rgb(146, 142, 142);
+  display: flex;
 }
 
 .routerButton {
   position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: serif;
   cursor: pointer;
   text-decoration: none;
-  grid-row-start: 1;
-  color: black;
-  border-left: 2px transparent solid;
-  border-right: 2px transparent solid;
+  color: rgb(236, 232, 232);
 }
 
 .routerButton:hover {
-  border-left: 2px black solid;
-  border-right: 2px black solid;
+  background-color: rgb(158, 151, 151);
+  font-size: 17px;
 }
 .projectList {
   cursor: initial;
   list-style: none;
-  padding: 0;
   position: absolute;
   top: 100%;
-  left: 0;
-  right: 0;
-
-  background-color: grey;
+  width: 100%;
+  z-index: 1;
+  background-color: rgb(158, 151, 151);
+  display: flex;
+  flex-direction: column;
+  padding: 8px 4px;
 }
 
-.projectList > li {
+.projectLink {
   cursor: pointer;
-  margin: 0.25rem 0;
-  padding: 0.5rem 1rem;
-  border-top: 1px solid black;
+  padding: 2%;
+  background-color: rgb(158, 151, 151);
+  border: 5px double grey;
+}
+.projectLink:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.projectLink:hover {
+  background-color: #0086b3;
+  /* border: 4px double grey; */
 }
 </style>
 

@@ -1,11 +1,10 @@
-
 <template>
   <div class="app">
-    <Header/>
+    <Header />
     <main class="content">
-      <router-view/>
+      <router-view />
     </main>
-    <Footer/>
+    <Footer />
   </div>
 </template>
 
@@ -29,29 +28,25 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* overflow: scroll; */
 }
 
 .app {
-  /* height: 100%; */
-  overflow: visible;
   color: #2c3e50;
-  display: grid;
-  /* grid-template-rows: 20% 75% 5%; */
-  grid-template-rows: 8rem 2fr 2rem;
-  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 body {
-  /* overflow: hidden; */
-  position: absolute;
+  width: 100%;
+  height: 100%;
   background-color: rgb(205, 206, 201);
-  width: 90%;
-  /* height: 100%; */
-  margin-left: 5%;
 }
-
 .content {
-  overflow: auto;
+  /* overflow: hidden; */
+  position: relative;
+  justify-self: start;
+  width: 85%;
 }
 </style>
