@@ -79,11 +79,12 @@ export default {
   grid-row-start: 2;
   background-color: rgb(146, 142, 142);
   display: flex;
+  justify-content: center;
 }
 
 .routerButton {
   position: relative;
-  width: 100%;
+  width: 20%;
   display: flex;
   align-items: center;
   justify-content: center;

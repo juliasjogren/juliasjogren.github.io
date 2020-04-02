@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="conLinks">
-      <span class="contact">{{msg}}</span>
+      <span class="link">{{msg}}</span>
       <a class="link" href="https://github.com/juliasjogren">{{github}}</a>
       <a
         class="link"
@@ -26,7 +26,7 @@ export default {
 };
 </script>
 
-<style scope>
+<style>
 .footer {
   background: #0086b3;
   text-align: center;
@@ -38,15 +38,17 @@ export default {
 }
 .conLinks {
   height: 100%;
+  width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
-a {
+.link {
   color: white;
+  width: 20%;
   text-decoration: none;
 }
-a:hover {
+.link:hover:not(:first-child) {
   text-decoration: underline;
   color: grey;
 }

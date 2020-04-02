@@ -35,7 +35,7 @@ export default {
   display: flex;
   height: 100%;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 body {
@@ -45,6 +45,7 @@ body {
 }
 .content {
   /* overflow: hidden; */
+  padding: 0 8%;
   position: relative;
   justify-self: start;
   width: 85%;
