@@ -20,7 +20,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 @media (min-width: 1070px) {
-  width: 80%;
-  margin-left: 10%;
+  width: 70%;
+  margin-left: 15%;
 }
 `;
