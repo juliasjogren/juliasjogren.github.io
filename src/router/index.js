@@ -25,6 +25,6 @@ const Router = () => {
 export default Router;
 
 const Routes = styled.div`
-	padding: 3%;
-	width: 82%;
+width: 89.5%;
+padding-top:3%;
 `;

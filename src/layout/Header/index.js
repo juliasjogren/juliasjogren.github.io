@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import projectData from "../../projectData";
 import cvpic from "../../assets/CVPic.jpeg";
 
+
 const Header = () => {
 	const [showProjectList, setShowProjectList] = useState(false);
 	const t1 = "Julia Sjögren";

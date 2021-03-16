@@ -1,11 +1,12 @@
 import backgammonPicture from "./assets/backgammon.png";
 import towergamePicture from "./assets/towergame.png";
+import scrabblePicture from "./assets/scrabble.png";
 import vetrarbrautinPicture from "./assets/vetrarbrautin.png";
 
 const productData = [
 	{
 		id: 1,
-		name: "TowerGame",
+		name: "Tower Game",
 		content:
 			"PJ's TowerGame is a first attempt to make a RPG tower defence game. It is a prototype of an game idea we have had for a while. This game was made as a way to inspire further ideas and to learn more about building games.  Place your towers on the battlefield and eliminate your enemies. Press the following link to take a look",
 		link: "http://pjstowergame.molin.ninja/",
@@ -36,7 +37,7 @@ const productData = [
 		content:
 			"Scrabble is a project made with html, css and Javascript using the framework React.js. It's a take on the classic boardgame scrabble, play with some friends and find out who is the ultimate word champion. the game is still in development and a few bugs may occur  ",
 		link: "https://juliasjogren.github.io/pjs-scrabble/",
-		picture: vetrarbrautinPicture,
+		picture: scrabblePicture,
 		latest: true,
 	},
 ];

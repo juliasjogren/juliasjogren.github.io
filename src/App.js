@@ -1,13 +1,26 @@
 import React from "react";
 import Router from "./router";
-// import './App.css';
+import styled from "styled-components";
+import './App.css';
+
 
 function App() {
 	return (
-		<div className="App">
+		<AppWrap className="App">
 			<Router />
-		</div>
+		</AppWrap>
 	);
 }
 
 export default App;
+
+
+const AppWrap = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+@media (min-width: 1070px) {
+  width: 80%;
+  margin-left: 10%;
+}
+`;
