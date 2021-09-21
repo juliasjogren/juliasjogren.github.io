@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import projectData from "../../projectData";
 import cvpic from "../../assets/CVPic.jpeg";
 
-
 const Header = () => {
 	const [showProjectList, setShowProjectList] = useState(false);
 	const t1 = "Julia Sjögren";
@@ -86,7 +85,7 @@ const Title2 = styled.div`
 `;
 const Buttons = styled.div`
 	width: 100%;
-	background-color: rgb(146, 142, 142);
+	background-color: #2b2b2a;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -100,7 +99,7 @@ const Projectlist = styled.div`
 	top: 100%;
 	width: 100%;
 	z-index: 1;
-	background-color: rgb(158, 151, 151);
+	background-color: #2b2b2a;
 	display: flex;
 	flex-direction: column;
 `;
@@ -109,7 +108,7 @@ const Project = styled.div`
 `;
 const L = styled(Link)`
 	text-decoration: none;
-	color: white;
+	color: #afafaf;
 `;
 const Pic = styled.img`
 	border: black 3px solid;
@@ -126,5 +125,5 @@ const NavLink = styled.div`
 	font-family: serif;
 	cursor: pointer;
 	text-decoration: none;
-	color: rgb(236, 232, 232);
+	color: #afafaf;
 `;
