@@ -7,7 +7,7 @@ import cvpic from "../../assets/CVPic.jpeg";
 const Header = () => {
 	const [showProjectList, setShowProjectList] = useState(false);
 	const t1 = "Julia Sjögren";
-	const t2 = "Welcome to my website";
+	const t2 = "Todo";
 
 	// window.addEventListener("click", function (e) {
 	// 	console.log("target", e.target);
@@ -58,7 +58,9 @@ const Header = () => {
 export default Header;
 
 const Wrap = styled.div`
-	background: #0086b3;
+	background: #3c4771;
+	/* background: #4a5684; */
+	/* background: #0086b3; */
 	width: 100%;
 	max-height: 120px;
 	text-align: center;
