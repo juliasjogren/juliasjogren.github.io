@@ -65,7 +65,6 @@ const ListItem = styled.div`
 	padding: 10px;
 	font-family: calibri;
 	cursor: pointer;
-	&: ;
 `;
 const Project = styled.div`
 	width: 80%;
