@@ -34,7 +34,10 @@ const Header = () => {
 					<NavLink name="about">
 						<L to={"/About"}>About</L>
 					</NavLink>
-					<NavLink
+					<NavLink name="projects">
+						<L to={"/Projects"}>Projects</L>
+					</NavLink>
+					{/* <NavLink
 						name="projects"
 						onClick={() => setShowProjectList(!showProjectList)}
 					>
@@ -47,7 +50,7 @@ const Header = () => {
 									</Project>
 								))}
 						</Projectlist>
-					</NavLink>
+					</NavLink> */}
 				</Buttons>
 			</HeaderWrap>
 			<Pic className="picture" alt="" src={cvpic} />
@@ -112,6 +115,9 @@ const Project = styled.div`
 const L = styled(Link)`
 	text-decoration: none;
 	color: #afafaf;
+	cursor: pointer;
+	padding-left: 30px;
+	padding-right: 30px;
 `;
 const Pic = styled.img`
 	border: black 3px solid;
@@ -126,7 +132,6 @@ const NavLink = styled.div`
 	align-items: center;
 	justify-content: center;
 	font-family: calibri;
-	cursor: pointer;
 	text-decoration: none;
 	color: #afafaf;
 `;

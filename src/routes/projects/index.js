@@ -1,17 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 // import Router from "./router";
 import styled from "styled-components";
 import projectData from "../../projectData";
 
 function Projects(props) {
-	const activeProjectName = props.match.params.name;
-	const activeProject = projectData.find(
-		(project) => project.name === activeProjectName
-	);
-	console.log(activeProjectName);
+	const [activeProject, setActiveProject] = useState(projectData[0]);
+	// const activeProjectName = props.match.params.name;
+	// const activeProject = projectData.find(
+	// 	(project) => project.name === activeProjectName
+	// );
 
 	return (
 		<ProjectsWrap>
+			<ProjectList>
+				{projectData.map((item) => (
+					<ListItem key={item.id} onClick={() => setActiveProject(item)}>
+						{item.name}
+						<Line />
+					</ListItem>
+				))}
+			</ProjectList>
 			{activeProject && activeProject !== null ? (
 				<Project>
 					<TextWrap>
@@ -41,18 +49,34 @@ const ProjectsWrap = styled.div`
 	display: flex;
 	margin-right: 115px;
 `;
-const Project = styled.div`
+const ProjectList = styled.div`
 	display: flex;
-	flex-direction: row;
+	flex-direction: column;
+	width: 350px;
+	height: 900px;
+	padding: 3%;
+	padding-top: 30px;
+	/* text-align: center; */
+	background-color: #2b2b2a;
+	color: #afafaf;
+`;
+const ListItem = styled.div`
+	font-size: 20px;
+	padding: 10px;
+	font-family: calibri;
+	cursor: pointer;
+	&: ;
+`;
+const Project = styled.div`
+	width: 80%;
+	display: flex;
+	flex-direction: column;
 `;
 const TextWrap = styled.div`
 	display: flex;
 	flex-direction: column;
-	background-color: #2b2b2a;
-	color: #afafaf;
-	width: 50%;
-	height: 950px;
-	padding: 15px;
+	font-family: calibri;
+	padding: 40px;
 `;
 const Wrap = styled.div`
 	display: flex;
@@ -84,6 +108,6 @@ const Picture = styled.img`
 `;
 const Line = styled.div`
 	border: 1px solid #afafaf;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-top: 5px;
+	margin-bottom: 5px;
 `;
