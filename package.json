@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "webpack-dev-server --open --mode development",
 		"build": "webpack --mode production",
-    "deploy": "push-dir --dir=dist --branch=master",
+		"deploy": "push-dir --dir=dist --branch=master",
 		"test": "react-scripts test"
 	},
 	"repository": {
