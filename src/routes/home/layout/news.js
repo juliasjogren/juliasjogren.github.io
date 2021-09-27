@@ -24,8 +24,9 @@ function News() {
 export default News;
 
 const Wrap = styled.div`
-	width: 100%;
+	width: 80%;
 	display: flex;
+	font-family: calibri;
 	flex-direction: column;
 	align-items: center;
 `;

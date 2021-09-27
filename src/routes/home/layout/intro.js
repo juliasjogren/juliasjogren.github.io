@@ -31,11 +31,11 @@ const IntroWrap = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
+	font-family: calibri;
 	background-color: #2b2b2a;
 	color: #afafaf;
-	width: 50%;
-	padding: 10px;
-	padding-top: 0;
+	width: 350px;
+	padding: 3%;
 `;
 const Name = styled.div`
 	text-align: center;
@@ -43,7 +43,7 @@ const Name = styled.div`
 	padding: 10px;
 `;
 const IntroText = styled.div`
-	font-size: 18px;
+	font-size: 17px;
 	padding: 10px;
 `;
 const Contact = styled.div`

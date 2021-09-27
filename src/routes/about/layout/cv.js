@@ -60,7 +60,7 @@ function Cv() {
 	return (
 		<CvWrap>
 			<Wrap>
-				<Title>Arbetserfarenhet</Title>
+				{/* <Title>Arbetserfarenhet</Title> */}
 				<Line />
 				{workexp.map((item) => (
 					<FactWrap key={item.time}>
@@ -76,7 +76,7 @@ function Cv() {
 				))}
 			</Wrap>
 			<Wrap>
-				<Title>Utbildning</Title>
+				{/* <Title>Utbildning</Title> */}
 				<Line />
 				{education.map((item) => (
 					<FactWrap key={item.time}>
@@ -116,17 +116,18 @@ const Wrap = styled.div`
 	padding: 20px;
 	padding-bottom: 0;
 	flex-direction: column;
-	margin-bottom: 18px;
+	margin-bottom: 90px;
 `;
 
 const Title = styled.div`
 	padding: 5px;
 	text-align: center;
-	font-family: Oblique Rain;
+	font-family: calibri;
 	font-size: 24px;
 `;
 const FactWrap = styled.div`
 	padding: 10px;
+	/* margin-bottom: 10px; */
 `;
 const FactItems = styled.div`
 	display: flex;

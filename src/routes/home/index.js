@@ -9,7 +9,7 @@ function Home() {
 
 	return (
 		<HomeWrap>
-			<Intro />
+			<StyledIntro />
 			<NewsWrap />
 		</HomeWrap>
 	);
@@ -21,8 +21,11 @@ const HomeWrap = styled.div`
 	display: flex;
 	margin-right: 115px;
 `;
+const StyledIntro = styled(Intro)`
+	width: 350px;
+`;
 
 const NewsWrap = styled(News)`
-	/* width: 60%; */
+	width: 70%;
 	/* align-self: center; */
 `;

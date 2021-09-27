@@ -61,6 +61,7 @@ const Wrap = styled.div`
 	background: #3c4771;
 	/* background: #4a5684; */
 	/* background: #0086b3; */
+	font-family: calibri;
 	width: 100%;
 	max-height: 120px;
 	text-align: center;
@@ -124,7 +125,7 @@ const NavLink = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-family: serif;
+	font-family: calibri;
 	cursor: pointer;
 	text-decoration: none;
 	color: #afafaf;

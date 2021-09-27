@@ -12,13 +12,16 @@ function Info() {
 
 	return (
 		<AboutWrap>
-			{/* <Text1>{intro}</Text1> */}
-			<Title>Work Experience</Title>
-			<Line />
-			<Text>{workXp}</Text>
-			<Title>Education</Title>
-			<Line />
-			<Text>{education}</Text>
+			<ExpWrap>
+				<Title>Work Experience</Title>
+				<Line />
+				<Text>{workXp}</Text>
+			</ExpWrap>
+			<Wrap>
+				<Title>Education</Title>
+				<Line />
+				<Text>{education}</Text>
+			</Wrap>
 		</AboutWrap>
 	);
 }
@@ -26,14 +29,23 @@ function Info() {
 export default Info;
 
 const AboutWrap = styled.div`
-	width: 50%;
+	width: 350px;
 	display: flex;
 	flex-direction: column;
+	font-family: calibri;
 	padding: 3%;
 	background-color: #2b2b2a;
 	color: #afafaf;
 `;
 
+const ExpWrap = styled.div`
+	margin-top: 239px;
+	margin-bottom: 12px;
+`;
+
+const Wrap = styled.div`
+	margin-bottom: 31px;
+`;
 const Title = styled.div`
 	margin-right: 4%;
 	font-size: 24px;
