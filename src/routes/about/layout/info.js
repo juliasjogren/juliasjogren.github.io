@@ -12,16 +12,16 @@ function Info() {
 
 	return (
 		<AboutWrap>
-			<ExpWrap>
-				<Title>Work Experience</Title>
-				<Line />
-				<Text>{workXp}</Text>
-			</ExpWrap>
 			<Wrap>
 				<Title>Education</Title>
 				<Line />
 				<Text>{education}</Text>
 			</Wrap>
+			<ExpWrap>
+				<Title>Work Experience</Title>
+				<Line />
+				<Text>{workXp}</Text>
+			</ExpWrap>
 		</AboutWrap>
 	);
 }
@@ -38,12 +38,12 @@ const AboutWrap = styled.div`
 	color: #afafaf;
 `;
 
-const ExpWrap = styled.div`
+const Wrap = styled.div`
 	margin-top: 239px;
 	margin-bottom: 12px;
 `;
 
-const Wrap = styled.div`
+const ExpWrap = styled.div`
 	margin-bottom: 31px;
 `;
 const Title = styled.div`

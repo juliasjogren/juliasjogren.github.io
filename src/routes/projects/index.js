@@ -75,7 +75,7 @@ const TextWrap = styled.div`
 	display: flex;
 	flex-direction: column;
 	font-family: calibri;
-	padding: 40px;
+	padding: 30px;
 `;
 const Wrap = styled.div`
 	display: flex;

@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 function Intro() {
 	const intro1 =
-		"I have made this website using html, css, JavaScript with React.js, as a way to showcase some of my projects and to share information about me. feel free to explore the site and learn more about me and explore some of my projects.";
+		"I have made this website using html, css, JavaScript and React.js, as a way to showcase some of my projects and to share information about me. feel free to explore the site and learn more about me and explore some of my projects.";
 	const intro2 =
 		"I have my own web development company where i accept work assignments to develop webpages. I am passionate about programming and eager to learn more and develop my coding skills. I will keep this page up to date with my latest projects. ";
 

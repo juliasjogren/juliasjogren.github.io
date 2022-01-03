@@ -8,6 +8,7 @@ function News() {
 	return (
 		<Wrap>
 			<Title>Latest news: </Title>
+			<Line />
 			<ProjectName>{newsProject.name}</ProjectName>
 			<Picture className="picture" alt="" src={`/${newsProject.picture}`} />
 			<Text>
@@ -31,10 +32,14 @@ const Wrap = styled.div`
 	align-items: center;
 `;
 const Title = styled.div`
-	/* background-color: #afafaf; */
-
-	padding: 20px;
+	padding-top: 15px;
 	font-size: 30px;
+`;
+
+const Line = styled.div`
+	border: 1px solid black;
+	width: 80%;
+	margin-bottom: 20px;
 `;
 const Picture = styled.img`
 	width: 80%;

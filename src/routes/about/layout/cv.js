@@ -9,11 +9,22 @@ function Cv() {
 		"I have my own web development company where i accept work assignments to develop webpages. I am passionate about programming and eager to learn more and develop my coding skills. I will keep this page up to date with my latest projects. ";
 	const workexp = [
 		{
-			role: "Webbutvecklingsuppdrag",
-			company: "Compr",
-			time: "2020 - 2021",
-			text:
-				"Utveckling av hemsida i JavaScript, React.js, Redux.js, Styled-components ",
+			role: "ButiksBiträde",
+			company: "Antikvariat Läslustan",
+			time: " 2011-2014",
+			text: "Expediera kunder, inköp av böcker, organisering i butik. ",
+		},
+		{
+			role: "Sommarjobb databehandling",
+			company: "Qlear AB ",
+			time: " 2014",
+			text: "Inmatning och strukturering av data i CRM-verktyg (sugar) ",
+		},
+		{
+			role: "Labbassistent",
+			company: "Lunds Universitet ",
+			time: "2016 - 2017",
+			text: "Hjälpa lägre årskurser med uppgifter ",
 		},
 		{
 			role: "Webbutvecklingsuppdrag",
@@ -23,22 +34,11 @@ function Cv() {
 				"Hjälpa Utveckling av javaScript komponent som skapar en grupp av SVGs ",
 		},
 		{
-			role: "Labbassistent",
-			company: "Lunds Universitet ",
-			time: "2016 - 2017",
-			text: "Hjälpa lägre årskurser med uppgifter ",
-		},
-		{
-			role: "Sommarjobb databehandling",
-			company: "Qlear AB ",
-			time: " 2014",
-			text: "Inmatning och strukturering av data i CRM-verktyg (sugar) ",
-		},
-		{
-			role: "ButiksBiträde",
-			company: "Antikvariat Läslustan",
-			time: " 2011-2014",
-			text: "Expediera kunder, inköp av böcker, organisering i butik. ",
+			role: "Webbutvecklingsuppdrag",
+			company: "Compr",
+			time: "2020 - 2021",
+			text:
+				"Utveckling av hemsida i JavaScript, React.js, Redux.js, Styled-components ",
 		},
 	];
 	const education = [
@@ -60,22 +60,6 @@ function Cv() {
 	return (
 		<CvWrap>
 			<Wrap>
-				{/* <Title>Arbetserfarenhet</Title> */}
-				<Line />
-				{workexp.map((item) => (
-					<FactWrap key={item.time}>
-						<FactItems>
-							<FactItem>{item.role}</FactItem>
-							<Space>{" | "}</Space>
-							<FactItem>{item.company}</FactItem>
-							<Space>{" | "}</Space>
-							<FactItem>{item.time}</FactItem>
-						</FactItems>
-						<FactText>{item.text}</FactText>
-					</FactWrap>
-				))}
-			</Wrap>
-			<Wrap>
 				{/* <Title>Utbildning</Title> */}
 				<Line />
 				{education.map((item) => (
@@ -91,6 +75,22 @@ function Cv() {
 					</FactWrap>
 				))}
 			</Wrap>
+			<WorkWrap>
+				{/* <Title>Arbetserfarenhet</Title> */}
+				<Line />
+				{workexp.map((item) => (
+					<FactWrap key={item.time}>
+						<FactItems>
+							<FactItem>{item.role}</FactItem>
+							<Space>{" | "}</Space>
+							<FactItem>{item.company}</FactItem>
+							<Space>{" | "}</Space>
+							<FactItem>{item.time}</FactItem>
+						</FactItems>
+						<FactText>{item.text}</FactText>
+					</FactWrap>
+				))}
+			</WorkWrap>
 			{/* <Wrap>
 				<Title>Programmering </Title>
 				<FactItem>Coding Languages</FactItem>
@@ -117,6 +117,14 @@ const Wrap = styled.div`
 	padding-bottom: 0;
 	flex-direction: column;
 	margin-bottom: 90px;
+`;
+const WorkWrap = styled.div`
+	display: flex;
+	justify-content: center;
+	padding: 20px;
+	padding-bottom: 0;
+	flex-direction: column;
+	margin-top: 226px;
 `;
 
 const Title = styled.div`
