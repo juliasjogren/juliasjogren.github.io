@@ -7,7 +7,7 @@ import cvpic from "../../assets/CVPic.jpeg";
 const Header = () => {
 	const [showProjectList, setShowProjectList] = useState(false);
 	const t1 = "Julia Sjögren";
-	const t2 = "Todo";
+	const t2 = "Front-end developer";
 
 	// window.addEventListener("click", function (e) {
 	// 	console.log("target", e.target);
