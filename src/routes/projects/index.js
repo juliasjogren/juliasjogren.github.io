@@ -2,6 +2,7 @@ import React, { useState } from "react";
 // import Router from "./router";
 import styled from "styled-components";
 import projectData from "../../projectData";
+import Header from "../../layout/Header";
 
 function Projects(props) {
 	const [activeProject, setActiveProject] = useState(projectData[0]);
@@ -12,33 +13,38 @@ function Projects(props) {
 
 	return (
 		<ProjectsWrap>
-			<ProjectList>
-				{projectData.map((item) => (
-					<ListItem key={item.id} onClick={() => setActiveProject(item)}>
-						{item.name}
-						<Line />
-					</ListItem>
-				))}
-			</ProjectList>
-			{activeProject && activeProject !== null ? (
-				<Project>
-					<TextWrap>
-						<Title className="title">{activeProject.name}</Title>
-						<Line />
-						<TextArea>{activeProject.content}</TextArea>
-						<Link href={activeProject.link}>Visit Site</Link>
-					</TextWrap>
-					<Wrap>
-						<Picture
-							className="picture"
-							alt=""
-							src={`/${activeProject.picture}`}
-						/>
-					</Wrap>
-				</Project>
-			) : (
-				<div className="NoProject">No project</div>
-			)}
+			<LeftWrap>
+				<ProjectList>
+					{projectData.map((item) => (
+						<ListItem key={item.id} onClick={() => setActiveProject(item)}>
+							{item.name}
+							<Line />
+						</ListItem>
+					))}
+				</ProjectList>
+			</LeftWrap>
+			<RightWrap>
+				<Header />
+				{activeProject && activeProject !== null ? (
+					<Project>
+						<TextWrap>
+							<Title className="title">{activeProject.name}</Title>
+							<Line />
+							<TextArea>{activeProject.content}</TextArea>
+							<Link href={activeProject.link}>Visit Site</Link>
+						</TextWrap>
+						<Wrap>
+							<Picture
+								className="picture"
+								alt=""
+								src={`/${activeProject.picture}`}
+							/>
+						</Wrap>
+					</Project>
+				) : (
+					<div className="NoProject">No project</div>
+				)}
+			</RightWrap>
 		</ProjectsWrap>
 	);
 }
@@ -47,14 +53,18 @@ export default Projects;
 
 const ProjectsWrap = styled.div`
 	display: flex;
-	margin-right: 115px;
+	/* margin-right: 115px; */
+`;
+const LeftWrap = styled.div`
+	display: flex;
+	width: 30%;
 `;
 const ProjectList = styled.div`
 	display: flex;
 	flex-direction: column;
-	width: 350px;
+	width: 100%;
 	height: 900px;
-	padding: 3%;
+	/* padding: 3%; */
 	padding-top: 30px;
 	/* text-align: center; */
 	background-color: #2b2b2a;
@@ -66,8 +76,13 @@ const ListItem = styled.div`
 	font-family: calibri;
 	cursor: pointer;
 `;
+const RightWrap = styled.div`
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+`;
 const Project = styled.div`
-	width: 80%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 `;

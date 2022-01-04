@@ -10,7 +10,7 @@ import Projects from "../routes/projects";
 const Router = () => {
 	return (
 		<BrowserRouter>
-			<Header />
+			{/* <Header /> */}
 			<Routes>
 				<Switch>
 					<Route exact path={routeNames.home} component={Home} />

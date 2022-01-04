@@ -25,7 +25,6 @@ function News() {
 export default News;
 
 const Wrap = styled.div`
-	width: 80%;
 	display: flex;
 	font-family: calibri;
 	flex-direction: column;

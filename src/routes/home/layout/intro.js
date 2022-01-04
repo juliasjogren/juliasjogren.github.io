@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import cvpic from "../../../assets/CVPic.jpeg";
 // import projectData from "../../projectData";
 
 function Intro() {
@@ -10,6 +11,7 @@ function Intro() {
 
 	return (
 		<IntroWrap>
+			<Pic className="picture" alt="" src={cvpic} />
 			<Name>Julia Sjögren</Name>
 			<IntroText>{intro1}</IntroText>
 			<IntroText>{intro2}</IntroText>
@@ -34,12 +36,16 @@ const IntroWrap = styled.div`
 	font-family: calibri;
 	background-color: #2b2b2a;
 	color: #afafaf;
-	width: 350px;
 	padding: 3%;
+`;
+const Pic = styled.img`
+	display: flex;
+	align-self: center;
+	width: 50%;
 `;
 const Name = styled.div`
 	text-align: center;
-	font-size: xxx-large;
+	font-size: xx-large;
 	padding: 10px;
 `;
 const IntroText = styled.div`

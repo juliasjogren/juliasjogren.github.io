@@ -4,9 +4,9 @@ import styled from "styled-components";
 
 function Cv() {
 	const intro1 =
-		"I have made this website using html, css, JavaScript with React.js, as a way to showcase some of my projects and to share information about me. feel free to explore the site and learn more about me and explore some of my projects.";
+		"I begun learning programming while I studied a bachelor in informatics at Lunds university. During my education I learned Java, C#, SQL, HTML, CSS and JavaScript. Programming is something I have gotten really intrested in and after the informatics program i took a couple of smaller courses mainly in Javascript to improve my skills.";
 	const intro2 =
-		"I have my own web development company where i accept work assignments to develop webpages. I am passionate about programming and eager to learn more and develop my coding skills. I will keep this page up to date with my latest projects. ";
+		"I have also started my own web developing company where i have had a few assignments. In my spare time im invloved with a couple of smaller projects with a friend mostly for fun an to improve and try new things. Since games is a interest of mine I have been learning programming by making games.";
 	const workexp = [
 		{
 			role: "ButiksBiträde",
@@ -59,6 +59,8 @@ function Cv() {
 
 	return (
 		<CvWrap>
+			<IntroText>{intro1}</IntroText>
+			<IntroText>{intro2}</IntroText>
 			<Wrap>
 				{/* <Title>Utbildning</Title> */}
 				<Line />
@@ -109,6 +111,15 @@ function Cv() {
 export default Cv;
 
 const CvWrap = styled.div``;
+
+const IntroText = styled.div`
+	padding: 20px;
+	font-size: 18px;
+	font-family: calibri;
+	font-size: 17px;
+	/* background-color: #2b2b2a; */
+	/* color: #afafaf; */
+`;
 
 const Wrap = styled.div`
 	display: flex;
