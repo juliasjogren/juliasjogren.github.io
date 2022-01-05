@@ -30,8 +30,7 @@ function Cv() {
 			role: "Webbutvecklingsuppdrag",
 			company: "Qlear AB",
 			time: "2019 -2020",
-			text:
-				"Hjälpa Utveckling av javaScript komponent som skapar en grupp av SVGs ",
+			text: "Utveckling av javaScript komponent som skapar en grupp av SVGs ",
 		},
 		{
 			role: "Webbutvecklingsuppdrag",
